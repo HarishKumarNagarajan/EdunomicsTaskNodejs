@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const port = 1234;
+const port = 1234 || process.env.PORT;
 const fs = require('fs')
 
 app.use(bodyParser.urlencoded({
@@ -74,7 +74,12 @@ app.get('/pastresult',(req,res)=> {
     return res.status(200).send({
         pastResult:past
     });
+});
+
+app.get('/',(res)=>{
+    res.send("\t\t\tWelcome\n\n -> /pastresult to view jsonobject of past readings\n\n-> /bounces?height=3&coefficient=0.39 to get curretn result chnage the height and coeeficient")
 })
+
 
 app.listen(1234, ()=>{
     console.log("Started at http://localhost:"+port);
