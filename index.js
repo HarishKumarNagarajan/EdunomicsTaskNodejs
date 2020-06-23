@@ -83,6 +83,6 @@ app.get('/',(res)=>{
 })
 
 
-app.listen(1234, ()=>{
+app.listen(port, ()=>{
     console.log("Started at http://localhost:"+port);
 })
