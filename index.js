@@ -78,7 +78,7 @@ app.get('/pastresult',(req,res)=> {
     });
 });
 
-app.get('/',(res)=>{
+app.get('/',(req,res)=>{
     res.send("\t\t\tWelcome\n\n -> /pastresult to view jsonobject of past readings\n\n-> /bounces?height=3&coefficient=0.39 to get curretn result chnage the height and coeeficient")
 })
 
