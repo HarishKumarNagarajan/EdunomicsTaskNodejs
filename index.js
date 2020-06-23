@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 const cors = require('cors');
-const port = 1234 || process.env.PORT;
+const port = process.env.PORT || 1234;
 const fs = require('fs')
 
 app.use(bodyParser.urlencoded({
